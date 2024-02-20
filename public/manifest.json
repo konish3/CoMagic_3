@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "content_scripts": [
+    {
+      "js": ["./js/content_script.js", "./js/jssip-3.10.0.js"],
+      "css": ["./css/index.css"],
+      "matches": ["<all_urls>"],
+      "run_at": "document_end"
+    }
+  ],
+  "name": "Softphone",
+  "short_name": "Phone",
+  "version": "1.0.0",
+  "description": "JSSip WebRTC client",
+  "icons": {
+    "16": "icons/icon-phone.png",
+    "32": "icons/icon-phone.png",
+    "48": "icons/icon-phone.png",
+    "64": "icons/icon-phone.png",
+    "128": "icons/icon-phone.png"
+  },
+  "permissions": [],
+  "host_permissions": ["<all_urls>"],
+  "web_accessible_resources": [
+    {
+      "resources": ["*.html"],
+      "matches": ["http://*/*", "https://*/*"],
+      "use_dynamic_url": true
+    }
+  ]
+}
